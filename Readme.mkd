@@ -1,0 +1,11 @@
+Repository for $HOME/.{files}
+=============================
+
+Repository for all $HOME/\.\* files.
+
+Setup
+-----------------------------
+
+* Clone this repository in a dir
+* do 'make'
+    - This will create a links in your HOME dir ( dot\_xxx -> ${HOME}/.xxx )
