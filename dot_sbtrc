@@ -1,0 +1,5 @@
+
+SBT_VIMOPTS=-Dsbt.log.noformat=true
+
+# when invoked from vim we need to turn of the colors.
+SBT_OPTIONS="${VIMRUNTIME:+${SBT_VIMOPTS}}"
