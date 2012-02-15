@@ -1,12 +1,14 @@
+ECG='\[\033[1;32m\]'
+ECB='\[\033[1;34m\]'
+ECY='\[\033[1;33m\]'
+ECV='\[\033[1;31m\]'
+EBEL='\007\]'
+ET='\[\033]0;'
 
-#TITLE='\[\033]0;$SCR$SB_NAME:\w\007\]'
 TITLE="$ET$SCR$SB_NAME \W$EBEL"
 GIT_BRANCH='$(__git_ps1 "[%s]")'
 if [ "x$PS_STR" == "x" ] ; then
 	PS1="$TITLE$ECB\h: \w\n$\[\033[0m\] "
-	#PS1="$TITLE\[\033[1;32m\]$PS_STR$GIT_BRANCH: \W\n$\[\033[0m\] "
-	#PS1="$TITLE$ECB$PS_STR$ECY$GIT_BRANCH$ECB: \w\n$\[\033[0m\] "
 else
-	PS1="$TITLE\[\033[1;32m\]$PS_STR$GIT_BRANCH: \W\n$\[\033[0m\] "
 	PS1="$TITLE$ECB$PS_STR$ECY$GIT_BRANCH$ECB: \w\n$\[\033[0m\] "
 fi
