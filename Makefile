@@ -20,3 +20,6 @@ install: ${DEST_FILES}
 
 ${DEST_FILES}: ${DESTDIR}/.% : ${SRCDIR}/dot_%
 	ln -s $< $@
+
+clean:
+	rm -f ${DEST_FILES}
