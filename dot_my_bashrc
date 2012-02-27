@@ -6,9 +6,10 @@ EBEL='\007\]'
 ET='\[\033]0;'
 
 TITLE="$ET$SCR$SB_NAME \W$EBEL"
-GIT_BRANCH='$(__git_ps1 "[%s]")'
+GIT_BRANCH='$(__git_ps1 "[%s] ")'
 if [ "x$PS_STR" == "x" ] ; then
 	PS1="$TITLE$ECB\h: \w\n$\[\033[0m\] "
+	PS1="$TITLE$ECY$GIT_BRANCH$ECB\w\n$\[\033[0m\] "
 else
 	PS1="$TITLE$ECB$PS_STR$ECY$GIT_BRANCH$ECB: \w\n$\[\033[0m\] "
 fi
