@@ -1,6 +1,6 @@
 # make the shell in every window a login shell
 startup_message off
-shell -$SHELL
+#shell -$SHELL
 defscrollback 5000
 deflogin off
 defescape x

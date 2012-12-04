@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Fixup virtual env
+if [ -n "$VIRTUAL_ENV" ]; then
+    export PATH=${_OLD_VIRTUAL_PATH}
+    export PS1=${_OLD_PS1}
+fi
