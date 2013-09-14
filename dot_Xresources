@@ -76,7 +76,7 @@ XTerm*scrollBar: true
 Rxvt*saveLine: 800
 
 *XTerm*faceName: monospace
-*XTerm*faceSize: 12
+*XTerm*faceSize: 10
 !*XTerm*font: -*-fixed-*-*-*-*-18-*-*-*-*-*-*-*
 
 *desktop.translations: #override\n\
