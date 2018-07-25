@@ -81,8 +81,10 @@ Rxvt*saveLine: 800
 
 *desktop.translations: #override\n\
     <Key>F9: SendRFBEvent()\n\
-    <Key>Escape: ShowPopup()\n\
+    <Key>F10: ShowPopup()\n\
     <Key>F12: ToggleFullScreen()
 
+*VncViewer*grabKeyboard: true
+*VncViewer*fullscreen: true
 !*Translations: #override \n\
 !	mod2 <KeyPress> v: insert-slection(CLIPBOARD, PRIMARY, CUT_BUFFER0)
