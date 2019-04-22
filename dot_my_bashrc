@@ -8,6 +8,11 @@ ECV='\[\033[1;31m\]'
 EBEL='\007\]'
 ET='\[\033]0;'
 
+GIT_PROMPT="/usr/share/git-core/contrib/completion/git-prompt.sh"
+if [ -e ${GIT_PROMPT} ]; then
+  source ${GIT_PROMPT}
+fi
+
 TITLE="$ET$SCR$SB_NAME \W$EBEL"
 GIT_BRANCH='$(__git_ps1 "[%s] ")'
 if [ "x$PS_STR" == "x" ] ; then
@@ -19,12 +24,11 @@ fi
 
 PATH=$PATH:$HOME/local/bin
 
-[ -e "$HOME/QSTK/config.sh" ] && source $HOME/QSTK/config.sh
 export WORKON_HOME=$HOME/domains
 export PIP_VIRTIALENV_BASE=$
 
 alias cdbase='cd `git rev-parse --show-cdup`'
-
-export PATH=$PATH:$HOME/src/algs4/bin
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:/opt/gradle/gradle-4.9/bin
 
 #[ -n "$VIRTUAL_ENV" ] && source $VIRTUAL_ENV/bin/activate 
