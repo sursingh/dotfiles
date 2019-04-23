@@ -11,9 +11,11 @@ all: install
 install: update
 
 update:
-	git pull --rebase
-	git submodule update --init --recursive --remote
-	(cd dot_vim; ./update.sh)
+	git stash
+	git pull --recurse-submodules
+	git stash pop
+	git mergetool -t vimdiff
+	(cd dot_vim/bundle/youcompleteme; python3 install.py)
 
 push: update
 	git push git@github.com:sursingh/dotfiles.git
