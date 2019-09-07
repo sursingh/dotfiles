@@ -12,12 +12,12 @@ install: update
 
 update:
 	git stash
-	git pull --recurse-submodules
+	git submodule update --depth 5 --init --recursive --remote
 	git stash pop
 	git mergetool -t vimdiff
 	(cd dot_vim/bundle/youcompleteme; python3 install.py)
 
-push: update
+push:
 	git push git@github.com:sursingh/dotfiles.git
 
 install: ${DEST_FILES}
