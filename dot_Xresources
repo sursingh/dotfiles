@@ -81,6 +81,9 @@ UXTerm*scrollBar: true
 *UXTerm*faceName: Source Code Pro,Source Code Pro Semibold,inconsolata
 *UXTerm*faceSize: 14
 
+*XTerm*faceName: inconsolata
+*XTerm*faceSize: 10
+!*XTerm*font: -*-fixed-*-*-*-*-18-*-*-*-*-*-*-*
 
 *desktop.translations: #override\n\
     <Key>F9: SendRFBEvent()\n\
