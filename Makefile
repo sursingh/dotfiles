@@ -7,15 +7,13 @@ DEST_FILES=$(patsubst ${SRCDIR}/dot_%, ${DESTDIR}/.%, ${FILES})
 
 all: install
 
-
 install: update
 
 update:
-	git stash
-	git submodule update --depth 5 --init --recursive --remote
-	git stash pop
-	git mergetool -t vimdiff
-	(cd dot_vim/bundle/youcompleteme; python3 install.py)
+	git submodule update --depth 1000 --init --recursive
+	(cd dot_vim/bundle/youcompleteme; \
+	    git submodule update --init --depth 5 --recursive; \
+	    python3 install.py)
 
 push:
 	git push git@github.com:sursingh/dotfiles.git

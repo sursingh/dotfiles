@@ -3,3 +3,7 @@ syntax on
 
 map <leader>r :GoRun
 
+if executable('xsel')
+    let g:system_copy#copy_command='xsel --clipboard --input'
+    let g:system_copy#paste_command='xsel --clipboard --output'
+endif
