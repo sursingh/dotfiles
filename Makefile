@@ -11,9 +11,12 @@ install: update
 
 update:
 	git submodule update --depth 1000 --init --recursive
-	(cd dot_vim/bundle/youcompleteme; \
-	    git submodule update --init --depth 5 --recursive; \
-	    python3 install.py)
+	(\
+	    cd dot_vim/bundle/youcompleteme; \
+	    git submodule sync --recursive; \
+	    git submodule update --init --recursive; \
+	    python3 install.py\
+	)
 
 push:
 	git push git@github.com:sursingh/dotfiles.git
